@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PaddleScript : MonoBehaviour {
 
 	public float paddleSpeed = 15;
+	public float mouseSensitivity = 10;
 	public float englishForce = 200;
 	float gameBoardWidth = 4.25f;
 
@@ -18,7 +19,7 @@ public class PaddleScript : MonoBehaviour {
 		// Move paddle
 		transform.Translate(paddleSpeed * Time.deltaTime * Input.GetAxis("Horizontal"), 0, 0);
 		// Vector3 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-    transform.Translate(Input.GetAxis("Mouse X") * Time.deltaTime * paddleSpeed, 0, 0);
+    transform.Translate(Input.GetAxis("Mouse X") * Time.deltaTime * mouseSensitivity, 0, 0);
 		// Check for edges of gameboard
 		if (transform.position.x >= gameBoardWidth) {
 			transform.position = new Vector3(gameBoardWidth, transform.position.y, transform.position.z);

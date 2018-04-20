@@ -108,4 +108,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paddleSpeed: 15
-  englishForce: 150
+  mouseSensitivity: 10
+  englishForce: 200
